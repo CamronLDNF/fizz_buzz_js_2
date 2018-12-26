@@ -120,7 +120,8 @@ const { FizzBuzz } =  require('./spec.helper')
 
 #### Answer:
 
-* First, the fizz-buzz.js source code is being linked to the index file. Then, the DOM is connected to the index file and event listeners and event handlers are embedded. 
+* In the first `<script>` tag, the fizz-buzz code is being invoked.
+* Following that, the first `addEventListener` "listens" for when the DOM content is loaded (i.e. page is loaded). Then it declares the variables `button` and `displayDiv` and assigns to them the corresponding elements in the index page. Then it adds another `addEventListener` to listen for a click (submitting the value entered), evaluates, and returns & displays the result in the `displayDiv` element.
 
 
 ### Question 8:
