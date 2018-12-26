@@ -81,7 +81,7 @@ const { FizzBuzz } =  require('./spec.helper')
 
 #### Answer:
 
-* ‘===‘ means the the values have to match in both data type and value
+* ‘===‘ means the values have to match in both data type and value
 * ‘==‘ means it can just match in value (so for example ’123’ == 123 would evaluate to true)
 
 
@@ -91,7 +91,7 @@ const { FizzBuzz } =  require('./spec.helper')
 
 #### Answer:
 
-* Because the code is read top-down, so it wouldn't evaluate for 5 otherwise if it renders something as true before it gets to 5. 
+* Given that the code is read top-down, for numbers divisible by both 5 and 3, I presume we want the code to evaluate for 5 over 3. 
 
 
 ### Question 5:
