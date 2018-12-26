@@ -27,17 +27,17 @@ This challenge was to recreate the FizzBuzz challenge in Javascript.
 
 Common use for the File System (fs) module:
 
-Read files
-Create files
-Update files
-Delete files
-Rename files
+* Read files
+* Create files
+* Update files
+* Delete files
+* Rename files
 
 As far as reading files go, there are two ways one can open and read files using the fs module:
 
-**fs.readFile** is the most common method  and runs asynchronously. This one should be used whenever possible to avoid blocking the main execution thread. 
+* **fs.readFile** is the most common method  and runs asynchronously. This one should be used whenever possible to avoid blocking the main execution thread. 
 
-**fs.readFileSync** method however runs synchronously (blocking). In other words, the file contents are returned directly from the function call and the execution thread is blocked while it loads the file. Best practice is to use this in start-up sections of the program (like when we're loading config files) or in command-line apps where blocking the main thread isn't a big deal.
+* **fs.readFileSync** method however runs synchronously (blocking). In other words, the file contents are returned directly from the function call and the execution thread is blocked while it loads the file. Best practice is to use this in start-up sections of the program (like when we're loading config files) or in command-line apps where blocking the main thread isn't a big deal.
 
 `let fizzBuzz` simply declares a variable and assigns to it the content returned from that file.
 
@@ -54,7 +54,7 @@ var anyName = require('./sourceFileName.js');
 console.log(anyName.FizzBuzz);
 ```
 
-Read more [here](http://www.tutorialsteacher.com/nodejs/nodejs-module-exports)
+Read more [here](http://www.tutorialsteacher.com/nodejs/nodejs-module-exports).
 
 All in all, the statement `eval( fizzBuzz + `\nexports.FizzBuzz = FizzBuzz;`)` exports the object property `FizzBuzz` and appends it to `fizzBuzz`, the read file, so that you can invoke that file content elsewhere with the `require()` method like this:
 
