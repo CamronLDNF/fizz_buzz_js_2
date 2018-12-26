@@ -39,13 +39,14 @@ As far as reading files go, there are two ways one can open and read files using
 
 **fs.readFileSync** method however runs synchronously (blocking). In other words, the file contents are returned directly from the function call and the execution thread is blocked while it loads the file. Best practice is to use this in start-up sections of the program (like when we're loading config files) or in command-line apps where blocking the main thread isn't a big deal.
 
-`let fizzBuzz` simply declares a variable and assigns it to the content returned from that file.
+`let fizzBuzz` simply declares a variable and assigns to it the content returned from that file.
 
 The `eval()` function evaluates any string passed in to it as JavaScript code. The string can represent a JavaScript expression, statement, or sequence of statements. 
 
 The `\n` is simply JS code for creating a new line.
 
 `exports` is an object (module.exports). So, you can attach properties or methods to it. In `exports.FizzBuzz = FizzBuzz;` we have attached a property "FizzBuzz" with the value `FizzBuzz` to the exports object. Now, you can import and use this module in _other_ files as shown below.
+
 ```
 #app.js
 var anyName = require('./sourceFileName.js');
@@ -54,6 +55,13 @@ console.log(anyName.FizzBuzz);
 ```
 
 Read more [here](http://www.tutorialsteacher.com/nodejs/nodejs-module-exports)
+
+All in all, the statement `eval( fizzBuzz + `\nexports.FizzBuzz = FizzBuzz;`)` exports the object property `FizzBuzz` and appends it to `fizzBuzz`, the read file, so that you can invoke that file content elsewhere with the `require()` method like this:
+
+```
+const { FizzBuzz } =  require('./spec.helper')
+```
+
 
 ### Question 2:
 
@@ -64,7 +72,7 @@ Read more [here](http://www.tutorialsteacher.com/nodejs/nodejs-module-exports)
 
 #### Answer:
 
-* To create a new instance of the FizzBuzz class for the tests.
+* To make that new instance of the FizzBuzz class available to _all_ the tests in that _describe_ block.
 
 
 ### Question 3:
