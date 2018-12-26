@@ -1,9 +1,7 @@
 # **FizzBuzz Challenge**
 -------
 
-FizzBuzz Site: https://camronldnf.github.io/fizz_buzz_js/
-
-Repo: https://github.com/CamronLDNF/fizz_buzz_js
+View the [live app here](https://camronldnf.github.io/fizz_buzz_js_2/).
 
 ## **Overview**
 This challenge was to recreate the FizzBuzz challenge in Javascript.
